@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "SetValue";
+}
+
+<h2>SetValue</h2>
+<a href="@Url.Action("GetValue","Test",new{Value="Working"})">Get Value To Another URL</a>
+@Html.ActionLink("Set Value By ActionLink","GetValue","Test",new {Value="Working"}, Request.Url.Scheme)
+

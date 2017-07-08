@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "GetValueInLocalStorageByHTML5";
+}
+
+<h2>GetValueInLocalStorageByHTML5</h2>
+
+<h2 id="Food"><strong></strong></h2>
+
+<script>
+    SetValueToPage();
+    function SetValueToPage() {
+        document.getElementById("Food").innerHTML = localStorage.getItem("Value");
+        localStorage.removeItem("Value");
+    }
+</script>

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "SetValueInCookiesByJavaScript";
+}
+
+<h2>SetValueInCookiesByJavaScript</h2>
+
+<h2>Set Value By JavaScript</h2>
+<button onclick="SetValueAndMoveURL()">Set Value By JS</button>
+<input type="text" value="the food is awesome" id="Food" />
+<script src="~/Scripts/CookieJS.js"></script>
+<script>
+    function SetValueAndMoveURL()
+    {
+        var Value = document.getElementById("Food").value;
+        setCookie("Value", Value, 0.01);
+        window.location.href = "@Url.Action("GetValueInCookiesByJavaScript","Test")";
+    }
+</script>
+

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "SetValueInLocalStorageByHTML5";
+}
+
+<h2>SetValueInLocalStorageByHTML5</h2>
+
+<h2>Set Value By JavaScript</h2>
+<button onclick="SetValueAndMoveURL()">Set Value By JS</button>
+<input type="text" value="the food is awesome" id="Food" />
+<script src="~/Scripts/CookieJS.js"></script>
+<script>
+    function SetValueAndMoveURL()
+    {
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            var Value = document.getElementById("Food").value;
+            localStorage.setItem("Value", Value);
+            // Retrieve
+             window.location.href = "@Url.Action("GetValueInLocalStorageByHTML5","Test")";
+        } else {
+            alert("Your Browser Does not support HTML Storage");
+        }
+
+
+
+    }
+</script>
+
+

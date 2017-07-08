@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "GetValueInCookiesByJavaScript";
+}
+
+<h2>GetValueInCookiesByJavaScript</h2>
+
+<h2 id="Food"><strong></strong></h2>
+<script src="~/Scripts/CookieJS.js"></script>
+
+<script>
+    SetValueToPage();
+    function SetValueToPage() {
+        document.getElementById("Food").innerHTML = getCookie("Value");
+        eraseCookie("Value");
+    }
+</script>
